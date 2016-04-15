@@ -1,0 +1,104 @@
+body{
+	background: rgb(240,240,240);
+}
+
+/* owlcarousel */
+.owl-carousel{
+	width: 600px;
+	margin:30px auto;
+}
+
+.item{
+	margin: 5px;
+	padding:3px 0;
+	border-radius: 5px;
+	background: rgba(210,210,210,.9);
+	text-align: center;
+	height: 20px;
+}
+/* /owlcarousel */
+
+/* mixitup */
+
+.mix{
+	width: 150px;
+	height: 100px;
+	margin: 20px;
+	display: none;
+}
+
+.category-1{
+	background: rgb(243,64,142);
+}
+.category-2{
+	background: rgb(248,165,154);
+}
+.category-3{
+	background: rgb(212,234,168);
+}
+
+.control{
+	width: 600px;
+	height: 100px;
+	margin: 10px auto;
+}
+.control button{
+	height: 50px;
+	padding: 5px 20px;
+	background: rgba(150,150,150,0.6);
+	border: 0;
+}
+
+.container{
+	width: 900px;
+	margin: 10px auto;
+}
+/* /mixitup */
+
+/* Parallax.js */
+#scene{
+	type:none;
+	display: block;
+	width: 100%;
+}
+
+.layer{
+	display: block;
+}
+/* /Parallax.js */
+
+/*tabs*/
+.tab{
+	display: inline-block;
+	cursor: pointer;
+	width: 135px;
+	margin: 5px;
+	padding-top:15px;
+	padding-bottom: 15px; 
+	background: rgb(190,190,190);
+	border-radius: 3px;
+	text-align: center;
+}
+
+.main{
+	position: relative;
+}
+
+.bodytab{
+	position: absolute;
+	width: 300px;
+	height: 150px;
+	background: rgba(100,100,100,0.7);
+	display: none;
+	
+}
+
+.active_body{
+	display: block;
+}
+
+.my_active{
+	background: rgb(140,140,140);
+}
+
+/*tabs*/

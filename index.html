@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.default.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- owlcarousel -->
+<div id="first" class="owl-carousel">
+	<div class="item">Content1</div>
+	<div class="item">Content2</div>
+	<div class="item">Content3</div>
+	<div class="item">Content4</div>
+	<div class="item">Content5</div>
+	<div class="item">Content6</div>
+	<div class="item">Content7</div>
+	<div class="item">Content8</div>
+	<div class="item">Content9</div>
+	<div class="item">Content10</div>
+	<div class="item">Content11</div>
+	<div class="item">Content12</div>
+</div>	
+<div id="second" class="owl-carousel">
+	<img src="http://placehold.it/350x250" alt="*">
+	<img src="http://placehold.it/350x250/F0F0F0" alt="*">
+	<img src="http://placehold.it/350x250" alt="*">
+	<img src="http://placehold.it/350x250/F0F0F0" alt="*">
+	<img src="http://placehold.it/350x250" alt="*">
+	<img src="http://placehold.it/350x250/F0F0F0" alt="*">
+	<img src="http://placehold.it/350x250" alt="*">
+	<img src="http://placehold.it/350x250/F0F0F0" alt="*">
+</div>
+<!-- /owlcarousel -->
+
+<!-- mixitup -->
+<div class="control">Lilters
+	<button class="filter" data-filter="all">All</button>
+	<button class="filter" data-filter=".category-1">cat1</button>
+	<button class="filter" data-filter=".category-2">cat2</button>
+	<button class="filter" data-filter=".category-3">cat3</button>
+<br><br>Sort
+	<button class="sort" data-sort="my-order:asc">Ascending Order</button>
+	<button class="sort" data-sort="my-order:desc">Descending Order</button>
+	<button class="sort" data-sort="random">Random</button>
+</div> 
+<div class="container" id="Container">
+	<div class="mix category-1" data-my-order="1">1</div>
+	<div class="mix category-2" data-my-order="2">2</div>
+	<div class="mix category-2" data-my-order="3">3</div>
+	<div class="mix category-3" data-my-order="4">4</div>
+	<div class="mix category-2" data-my-order="5">5</div>
+</div>
+<!-- /mixitup -->
+
+<!-- Parallax.js -->
+<ul id="scene">
+  <li class="layer" data-depth="0.00"><img src="img/Emoji Smiley-01.png"></li>
+  <li class="layer" data-depth="0.20"><img src="img/Emoji Smiley-06.png"></li>
+  <li class="layer" data-depth="0.40"><img src="img/Emoji Smiley-23.png"></li>
+  <li class="layer" data-depth="0.60"><img src="img/Emoji Smiley-24.png"></li>
+  <li class="layer" data-depth="0.80"><img src="img/Emoji Smiley-43.png"></li>
+  <li class="layer" data-depth="1.00"><img src="img/Emoji Smiley-48.png"></li>
+</ul>
+<!-- Parallax.js -->
+
+<!-- tabs -->
+<ul class="tabs">
+	<li class="tab active_tab" id="tab1">tab1</li>
+	<li class="tab" id="tab2">tab2</li>
+	<li class="tab" id="tab3">tab3</li>
+</ul>
+<div class="main">
+	<div class="bodytab active_body" id="bodytab1">Content1</div>
+	<div class="bodytab" id="bodytab2">Content2</div>
+	<div class="bodytab" id="bodytab3">Content3</div>
+</div>
+<!-- /tabs -->
+<script src="js/jquery-2.2.1.js"></script>		
+<script src="js/owl.carousel.js"></script>
+<script src="js/jquery.mixitup.js"></script>
+<script src="js/jquery.parallax.min.js"></script>
+<script>
+
+$('#first').owlCarousel({
+	dots:true,
+	items:3,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true,
+    loop:true
+});
+
+$('#second').owlCarousel({
+	items:4,
+	dots:false,
+	nav:true,
+    loop:true
+});
+
+$('#Container').mixItUp({ });
+
+$('#scene').parallax();
+
+var tabs=$('.tabs');
+var bodytab=$('.main');
+function my_tabs(tabs,bodytab) {
+	$(tabs).find('li').on('click',function() {
+		$('.bodytab').removeClass('active_body')
+		$('#body'+$(this).attr("id")).addClass('active_body')
+		$('.tab').removeClass('active_tab');
+		$(this).addClass('active_tab')
+	})
+ };
+
+my_tabs(tabs,bodytab);
+</script>
+</body>
+</html>
