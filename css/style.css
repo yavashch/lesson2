@@ -101,4 +101,8 @@ body{
 	background: rgb(140,140,140);
 }
 
+.active_tab{
+	background: rgb(150,150,150);
+}
+
 /*tabs*/
